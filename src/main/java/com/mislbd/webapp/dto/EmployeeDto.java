@@ -1,7 +1,15 @@
 package com.mislbd.webapp.dto;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+
 public class EmployeeDto {
+
+    @NotNull(message = "Employee ID cannot be null")
     private Long employeeId;
+
+    @NotNull(message = "First name cannot be null")
+    @Min(value = 3, message = "First name must be at least 1 character long")
     private String firstName;
     private String lastName;
 
