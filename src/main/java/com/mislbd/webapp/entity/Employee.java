@@ -22,6 +22,19 @@ public class Employee {
     private String address;
     private Date dateOfBirth;
 
+    @Lob
+    private String remarks;
+
+    @Transient
+    private Long age;
+
+    @ManyToOne
+    @JoinColumn(
+            name = "department_id",
+            foreignKey = @ForeignKey(name = "FK_EMPLOYEE_DEPARTMENT")
+    )
+    private Department department;
+
     public Employee() {}
 
     public Employee(Long employeeId,
@@ -94,5 +107,29 @@ public class Employee {
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
+    public Long getAge() {
+        return age;
+    }
+
+    public void setAge(Long age) {
+        this.age = age;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

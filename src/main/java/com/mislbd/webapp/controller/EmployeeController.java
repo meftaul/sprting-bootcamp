@@ -22,6 +22,7 @@ public class EmployeeController {
 //    - Insert -> /employees (POST)
 //    - Update -> /employees/{empId} (PUT)
 //    - Delete -> /employees/{empId} (DELETE)
+    // /employees/bulk-upload/ (POST) - Bulk Insert
 
     private final EmployeeService employeeService;
 
