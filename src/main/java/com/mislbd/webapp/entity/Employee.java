@@ -37,14 +37,12 @@ public class Employee {
 
     public Employee() {}
 
-    public Employee(Long employeeId,
-                    String firstName,
+    public Employee(String firstName,
                     String lastName,
                     String email,
                     String phone,
                     String address,
                     Date dateOfBirth) {
-        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
